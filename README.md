@@ -61,4 +61,4 @@ Many-to-One: Many attendees can attend one event.
 Many-to-One: A task is part of one event.
 
 
-![diagram-export-6-20-2025-11_41_52-AM](https://github.com/user-attachments/assets/ab3430b7-03d3-472f-bc0e-4e4ee10c1bd4)
+![ER_Diagram](https://github.com/user-attachments/assets/d0541c51-4faf-4583-9927-5f1c42f4cc61)
