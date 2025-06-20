@@ -13,52 +13,45 @@ Expenses and Budgeting: Track event expenses and budgets.
 # Entities and Attributes of the Event Management
 Entities act as building blocks of the database which represents the objects that are needed to be stored and managed. Attributes are the properties or characteristics of each entity.
 
-Consider six tables event, attendee, venue, task, schedule, and budget.
+# Relational Database Schema for Event Management
+This schema consists of six primary tables designed to efficiently manage event-related data. Each table captures specific aspects of event management, with foreign key relationships ensuring data integrity across entities.
 
-Event tables can include columns such as EVENT_ID, EVENT_NAME, and EVENT_DATE.
-Attendee tables can include ATTENDEE_ID, NAME, NUMBER, and EVENT_ID.
-Venue tables can include VENUE_ID, VENUE_NAME and CAPACITY. 
-Task tables can include TASK_ID, NAME, and EVENT_ID.
-Schedule tables can include SCHEDULE_ID, EVENT_ID, START_ID and END_ID.
-Budget tables can include BUDGET_ID, EVENT_ID, and TOTAL_BUDGET.
+## 1. Event Table: Stores Event Information
+EVENT_ID (Primary Key): A unique identifier for each event.
+EVENT_NAME: The name or title of the event.
+EVENT_DATE: The scheduled date for the event.
 
-## 1. Event table: Stores event information
-EVENT_ID (Primary key): Unique identifier for each event.
-EVENT_NAME: It describes the name of the event.
-EVENT_DATE: It describes the Date of the Event.
+## 2. Attendee Table: Stores Attendee Information
+ATTENDEE_ID (Primary Key): A unique identifier for each attendee.
+NAME: The full name of the attendee.
+NUMBER: The contact number of the attendee.
+EVENT_ID: A foreign key linking to the EVENT_ID in the Event table, indicating which event the attendee is participating in.
 
-## 2. Attendee table: Store attendee's information
-ATTENDEE_ID (Primary key): Unique identifier for each attendee.
-NAME: It describes the name of the attendee.
-NUMBER: It describes the phone number of the attendee.
-EVENT_ID: It is a foreign key(references EVENT_ID in the Event table).
+## 3. Venue Table: Contains Venue Information
+VENUE_ID (Primary Key): A unique identifier for each venue.
+VENUE_NAME: The name of the venue.
+CAPACITY: The maximum capacity of the venue, indicating how many people it can accommodate.
 
-## 3. Venue table: Contains information about the event
-VENUE_ID(Primary key): unique identifier for each venue.
-VENUE_NAME: It describes the name of the venue.
-CAPACITY: It describes the maximum capacity of the venue.
+## 4. Task Table: Stores Tasks or Actions for an Event
+TASK_ID (Primary Key): A unique identifier for each task.
+NAME: A description or title for the task.
+EVENT_ID: A foreign key referencing the EVENT_ID in the Event table, showing the event to which the task belongs.
 
-## 4. Task table: An action needs to be completed for the event
-TASK_ID(Primary key): unique identifier for each task.
-NAME: It describes the name of the task.
-EVENT_ID: It is a foreign key(references EVENT_ID in the Event table).
+## 5. Schedule Table: Details the Timing for Event Activities
+SCHEDULE_ID (Primary Key): A unique identifier for each schedule entry.
+EVENT_ID: A foreign key referencing the EVENT_ID in the Event table.
+START_DATE: The starting date (and/or time) of the scheduled activity.
+END_DATE: The ending date (and/or time) of the scheduled activity.
 
-## 5. Schedule table: Arrange to take place at a particular time
-SCHEDULE_ID(Primary Key): unique identifier for each Schedule.
-EVENT_ID: It is a foreign key(references EVENT_ID in the Event table).
-START_DATE: It describes the starting date of the event.
-END_DATE: It describes the ending date of the event.
-
-## 6. Budget table: A financial planning
-BUDGET_ID(Primary Key): unique identifier for each budget.
-EVENT_ID: It is a foreign key(references EVENT_ID in the Event table).
-TOTAL_BUDGET: It describes the total budget of the event.
+## 6. Budget Table: Captures Financial Planning Details
+BUDGET_ID (Primary Key): A unique identifier for each budget record.
+EVENT_ID: A foreign key referencing the EVENT_ID in the Event table.
+TOTAL_BUDGET: The total budget allocated for the event.
 
 # Relationships between these entities
 One-to-Many: One event can have multiple attendees.
 One-to-Many: An event consists of many tasks.
 Many-to-One: Many attendees can attend one event.
-Many-to-One: A task is part of one event.
-
+Many-to-One: A task is part of one event
 
 ![ER_Diagram](https://github.com/user-attachments/assets/d0541c51-4faf-4583-9927-5f1c42f4cc61)
