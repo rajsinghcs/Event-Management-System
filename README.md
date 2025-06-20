@@ -1,4 +1,3 @@
-![diagram-export-6-20-2025-11_41_52-AM](https://github.com/user-attachments/assets/ab3430b7-03d3-472f-bc0e-4e4ee10c1bd4)
 # Event-Management-System
 
 # 📘 Event Management System: Relational Database Design
@@ -60,3 +59,6 @@ One-to-Many: One event can have multiple attendees.
 One-to-Many: An event consists of many tasks.
 Many-to-One: Many attendees can attend one event.
 Many-to-One: A task is part of one event.
+
+
+![diagram-export-6-20-2025-11_41_52-AM](https://github.com/user-attachments/assets/ab3430b7-03d3-472f-bc0e-4e4ee10c1bd4)
