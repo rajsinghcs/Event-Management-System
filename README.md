@@ -1,3 +1,4 @@
+![diagram-export-6-20-2025-11_41_52-AM](https://github.com/user-attachments/assets/ab3430b7-03d3-472f-bc0e-4e4ee10c1bd4)
 # Event-Management-System
 
 # 📘 Event Management System: Relational Database Design
