@@ -54,4 +54,8 @@ One-to-Many: An event consists of many tasks.
 Many-to-One: Many attendees can attend one event.
 Many-to-One: A task is part of one event
 
+
+
+
+
 ![ER_Diagram](https://github.com/user-attachments/assets/d0541c51-4faf-4583-9927-5f1c42f4cc61)
