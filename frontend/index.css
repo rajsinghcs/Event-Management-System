@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* Pure white */
+    --foreground: 0 0% 0%; /* Pure black */
+
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 0 0% 0%; /* Black text */
+
+    --popover: 0 0% 100%; /* White popovers */
+    --popover-foreground: 0 0% 0%; /* Black text */
+
+    --primary: 0 0% 0%; /* Black primary */
+    --primary-foreground: 0 0% 100%; /* White text on black */
+    --primary-hover: 0 0% 20%; /* Dark gray hover */
+
+    --secondary: 0 0% 95%; /* Light gray */
+    --secondary-foreground: 0 0% 0%; /* Black text */
+
+    --muted: 0 0% 96%; /* Very light gray */
+    --muted-foreground: 0 0% 45%; /* Medium gray text */
+
+    --accent: 0 0% 90%; /* Light gray accent */
+    --accent-foreground: 0 0% 0%; /* Black text */
+
+    --success: 0 0% 0%; /* Black success */
+    --success-foreground: 0 0% 100%; /* White text */
+
+    --warning: 0 0% 0%; /* Black warning */
+    --warning-foreground: 0 0% 100%; /* White text */
+
+    --destructive: 0 0% 0%; /* Black destructive */
+    --destructive-foreground: 0 0% 100%; /* White text */
+
+    --border: 0 0% 90%; /* Light gray borders */
+    --input: 0 0% 90%; /* Light gray inputs */
+    --ring: 0 0% 0%; /* Black ring */
+
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 20%), hsl(0 0% 40%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --shadow-card: 0 4px 16px -2px hsl(0 0% 0% / 0.1);
+    --shadow-hover: 0 8px 24px -4px hsl(0 0% 0% / 0.15);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%; /* Very light gray sidebar */
+    --sidebar-foreground: 0 0% 0%; /* Black text */
+    --sidebar-primary: 0 0% 0%; /* Black primary */
+    --sidebar-primary-foreground: 0 0% 100%; /* White text */
+    --sidebar-accent: 0 0% 95%; /* Light gray accent */
+    --sidebar-accent-foreground: 0 0% 0%; /* Black text */
+    --sidebar-border: 0 0% 90%; /* Light gray border */
+    --sidebar-ring: 0 0% 0%; /* Black ring */
+  }
+
+  .dark {
+    --background: 0 0% 0%; /* Pure black */
+    --foreground: 0 0% 100%; /* Pure white */
+
+    --card: 0 0% 10%; /* Dark gray cards */
+    --card-foreground: 0 0% 100%; /* White text */
+
+    --popover: 0 0% 10%; /* Dark gray popovers */
+    --popover-foreground: 0 0% 100%; /* White text */
+
+    --primary: 0 0% 100%; /* White primary */
+    --primary-foreground: 0 0% 0%; /* Black text on white */
+
+    --secondary: 0 0% 20%; /* Dark gray */
+    --secondary-foreground: 0 0% 100%; /* White text */
+
+    --muted: 0 0% 15%; /* Dark muted */
+    --muted-foreground: 0 0% 70%; /* Light gray text */
+
+    --accent: 0 0% 25%; /* Medium gray accent */
+    --accent-foreground: 0 0% 100%; /* White text */
+
+    --destructive: 0 0% 100%; /* White destructive */
+    --destructive-foreground: 0 0% 0%; /* Black text */
+
+    --border: 0 0% 25%; /* Medium gray borders */
+    --input: 0 0% 25%; /* Medium gray inputs */
+    --ring: 0 0% 100%; /* White ring */
+    --sidebar-background: 0 0% 15%; /* Dark sidebar */
+    --sidebar-foreground: 0 0% 100%; /* White text */
+    --sidebar-primary: 0 0% 100%; /* White primary */
+    --sidebar-primary-foreground: 0 0% 0%; /* Black text */
+    --sidebar-accent: 0 0% 20%; /* Dark gray accent */
+    --sidebar-accent-foreground: 0 0% 100%; /* White text */
+    --sidebar-border: 0 0% 25%; /* Medium gray border */
+    --sidebar-ring: 0 0% 100%; /* White ring */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    min-height: 100vh;
+    @apply text-foreground;
+    background: linear-gradient(120deg, hsl(var(--primary) / 0.05) 0%, hsl(var(--secondary) / 0.05) 50%, hsl(var(--accent) / 0.05) 100%),
+      url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="48" stroke="%23e0e0e0" stroke-width="2" fill="none"/></svg>');
+    background-size: cover, 200px 200px;
+    background-repeat: no-repeat, repeat;
+    background-attachment: fixed;
+  }
+
+  .app-bg {
+    @apply bg-card/80 backdrop-blur-md rounded-2xl shadow-2xl border border-border;
+  }
+}
